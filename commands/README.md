@@ -18,33 +18,8 @@ kubectl get pods -A
 
 ---
 
-## 2. Cloning and Running the Example Voting App
 
-Clone the repository:
-```bash
-git clone https://github.com/dockersamples/example-voting-app.git
-cd example-voting-app/
-```
-
-Apply Kubernetes manifests:
-```bash
-kubectl apply -f k8s-specifications/
-```
-
-Check resources:
-```bash
-kubectl get all
-```
-
-Forward local ports:
-```bash
-kubectl port-forward service/vote 5000:5000 --address=0.0.0.0 &
-kubectl port-forward service/result 5001:5001 --address=0.0.0.0 &
-```
-
----
-
-## 3. Managing Files in Example Voting App
+## 2. Managing Files in Example Voting App
 
 Navigate into seed data:
 ```bash
@@ -56,7 +31,7 @@ cat generate-votes.sh
 
 ---
 
-## 4. Installing Argo CD
+## 3. Installing Argo CD
 
 Create namespace and install Argo CD:
 ```bash
@@ -86,7 +61,7 @@ kubectl get secret -n argocd argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 ---
 
-## 5. Kubernetes Dashboard
+## 4. Kubernetes Dashboard
 
 Deploy dashboard:
 ```bash
@@ -100,7 +75,7 @@ kubectl -n kubernetes-dashboard create token admin-user
 
 ---
 
-## 6. Delete KIND Cluster
+## 5. Delete KIND Cluster
 
 Delete the cluster:
 ```bash
@@ -109,7 +84,7 @@ kind delete cluster --name=kind
 
 ---
 
-## 7. Install Helm
+## 6. Install Helm
 
 ```bash
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
@@ -119,7 +94,7 @@ chmod 700 get_helm.sh
 
 ---
 
-## 8. Install Kube Prometheus Stack
+## 7. Install Kube Prometheus Stack
 
 Add repos and update:
 ```bash
@@ -157,7 +132,7 @@ kubectl port-forward svc/kind-prometheus-grafana -n monitoring 31000:80 --addres
 
 ---
 
-## 9. Prometheus Queries
+## 8. Prometheus Queries
 
 ### CPU Usage:
 ```promql
