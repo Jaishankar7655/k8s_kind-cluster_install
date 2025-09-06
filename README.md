@@ -1,7 +1,7 @@
 # KIND Cluster Setup Guide
 
 ## 1. Installing KIND and kubectl
-Install KIND and kubectl using the provided [script](https://github.com/LondheShubham153/kubestarter/blob/main/kind-cluster/install.sh):
+Install KIND and kubectl using the provided [script](https://github.com/Jaishankar7655/k8s_kind-cluster_install/blob/main/kind_install.sh):
 
 ## 2. Setting Up the KIND Cluster
 Create a kind-config.yaml file:
