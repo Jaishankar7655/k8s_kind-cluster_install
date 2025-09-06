@@ -1,6 +1,6 @@
-# KIND Cluster Setup with Example Voting App, Argo CD, and Monitoring
+# KIND Cluster Setup , Argo CD, promethius , graphana and Monitoring
 
-This guide walks through setting up a **KIND Kubernetes cluster**, deploying the **Example Voting App**, configuring **Argo CD** for GitOps, and installing the **Kube Prometheus Stack** for monitoring.
+This guide walks through setting up a **KIND Kubernetes cluster**, configuring **Argo CD** for GitOps, and installing the **Kube Prometheus Stack** for monitoring.
 
 ---
 
